@@ -54,10 +54,6 @@
     const pagamentoParcial = pagamentoParcialEl.checked;
     const pagamentoCompleto = pagamentoCompletoEl.checked;
 
-    let forma_pagamento = "Não informado";
-    if (pagamentoParcial) forma_pagamento = "50% agora e 50% depois";
-    if (pagamentoCompleto) forma_pagamento = "Pagamento total";
-
     // Validação
     if (!nome || !sobrenome || !email || !telefone || !tamanho || !modelo) {
       alert("Por favor, preencha todos os campos obrigatórios.");
@@ -112,9 +108,9 @@ const nomes = [
   "Letícia - BA", "Bruno - BA", "Camila - BA", "Rafael - BA", "Sara - BA",
   "Pedro - SP", "Ana - RJ", "Vitória - MG", "Mateus - PR", "Carolina - SC",
   "Gabriel - RS", "Beatriz - PE", "Caio - CE", "Julia - GO", "Enzo - PA",
-  "Isabela - AM", "Thiago - ES", "Lara - MT", "Gustavo - PB", "Clara - MA",
+  "Isabela - AM", "Thiago - R", "Lara - MT", "Gustavo - PB", "Clara - MA",
   "Daniel - AL", "Helena - SE", "Rodrigo - PI", "Yasmin - RN", "Samuel - DF",
-  "Bianca - SP", "Eduardo - AC", "Luana - AP", "Diego - RR", "Sofia - TO"
+  "Bianca - RO", "Eduardo - AC", "Luana - AP", "Diego - RR", "Sofia - TO"
 
 ];
 
@@ -166,6 +162,5 @@ function iniciarContadorVisual() {
   atualizar();
   setInterval(atualizar, 1000);
 }
-
 
 document.addEventListener("DOMContentLoaded", iniciarContadorVisual);
